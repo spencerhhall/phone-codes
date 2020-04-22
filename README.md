@@ -18,20 +18,10 @@ as follows:\
 \
 For many people's phone passwords, they often choose to spell out
 a word. It can be meaningful or completely random and it happens a lot.
-For example, my mother's phone password used to be 3825 for a number
-of years.\
+For example, my mother's phone password used to be 3825 and her computer
+password was a combination of mine nd my sister's name for a number of years.\
 \
-This project seeks to find the most common 4 and 6-digit passcodes
-(2 of the iPhone numerical passcode options) from a list of many 4
-and 6 letter-long words. The results will be displayed graphically
-(I need to work on my Python data visualization) so that you can
-understand the odds of guessing a word-based passcode.\
+This code, given a specific wordlist, maps every word to a combination of
+numbers and visualizes the frequency of each combination.\
 \
-For now, I will not be considering passcodes made from multiple words
-or the commonality of the word itself because I haven't even finished
-writing this file and that's gonna take some work. I'll probably incorporate
-the "popularity" of words later on, but not yet.\
-\
-Idea: generalize it so that it just takes in a wordlist in standard format
-and converts it into a set of numbers, which is displayed. It's on the user
-to choose a good wordlist (popular words, length of words, etc.).
+Eventually, l33tsp34k will be added.
