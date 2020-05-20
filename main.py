@@ -8,14 +8,15 @@ from os import path
 # convert the file (probably use a dict)
 # ~visualize~
 def main():
-	while True:
+	while False:
 		fileName = input("Enter the name of the wordlist file (must be a txt)\n")
 		if ".txt" not in fileName:
 			fileName += ".txt"
 		if path.exists(fileName):
 	 		break
 
-	cleanedWordlist = clean.cleanWordlist(fileName)
+	characterCount = input("Enter an amount of characters\n")
+	cleanedWordlist = clean.cleanWordlist("wiki-100k.txt", int(characterCount))
 	print(cleanedWordlist)
 
 
