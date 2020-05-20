@@ -1,4 +1,3 @@
-# cleans an imported wordlist
 from unidecode import unidecode
 
 def cleanWordlist(fileName, characterCount):

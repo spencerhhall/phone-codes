@@ -1,4 +1,4 @@
-import clean, os.path
+import clean, convert, viz, os.path
 from os import path
 
 
@@ -15,10 +15,16 @@ def main():
 		if path.exists(fileName):
 	 		break
 
-	characterCount = input("Enter an amount of characters\n")
+	while True:
+		characterCount = input("Enter an amount of characters\n")
+		if characterCount.isdigit():
+			break
+
 	cleanedWordlist = clean.cleanWordlist("wiki-100k.txt", int(characterCount))
 	print(cleanedWordlist)
-
+	numbers = convert.convertToNumbers(cleanedWordlist)
+	print(numbers)
+	viz.graphResults(numbers)
 
 if __name__ == "__main__":
    main()
