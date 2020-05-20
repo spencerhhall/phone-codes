@@ -1,23 +1,29 @@
-import clean
-# ask for file
-# ask for specific char length
-# analyze list and produce visualization
+import clean, os.path
+from os import path
 
-# Get the desired file
-fileName = None
-while fileName == None:
-	fileName = input("Enter the name of the wordlist file\n")
 
-	if ".txt" not in fileName:
-		fileName += ".txt"
+# import clean
+# import a specified wordlist (check existence and file type)
+# clean the file
+# convert the file (probably use a dict)
+# ~visualize~
+def main():
+	while True:
+		fileName = input("Enter the name of the wordlist file (must be a txt)\n")
 
-	try:
-		f = open(fileName, "r")
-		# ask for character count
-		# clean file
-	except:
-		print("Invalid file name.")
-		fileName = None
+		if ".txt" not in fileName:
+			fileName += ".txt"
 
-# call analysis on new df
-# 
+		if path.exists(fileName):
+	 		break
+
+	cleanedWordlist = clean.cleanWordlist(fileName)
+
+
+
+
+
+
+
+if __name__ == "__main__":
+   main()
