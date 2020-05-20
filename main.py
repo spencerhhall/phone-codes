@@ -10,19 +10,13 @@ from os import path
 def main():
 	while True:
 		fileName = input("Enter the name of the wordlist file (must be a txt)\n")
-
 		if ".txt" not in fileName:
 			fileName += ".txt"
-
 		if path.exists(fileName):
 	 		break
 
 	cleanedWordlist = clean.cleanWordlist(fileName)
-
-
-
-
-
+	print(cleanedWordlist)
 
 
 if __name__ == "__main__":
