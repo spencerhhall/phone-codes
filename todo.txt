@@ -1,1 +1,2 @@
 - Create some sort of summary output
+- Make the input section one function
