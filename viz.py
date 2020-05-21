@@ -31,7 +31,7 @@ def graphResults(numberCombos, fileName, length, maxBars):
 	plt.xlabel("Combination")
 	plt.ylabel("Frequency")
 	plt.title("Top " + str(len(keys)) + " " + length + "-Letter Combinations from " + fileName)
-	plt.xticks(rotation = 90)
+	plt.xticks(rotation = 70)
 	plt.yticks(np.arange(0, valMax + 1, step = 1))
 	plt.grid(True, alpha = .2)
 	plt.show()
