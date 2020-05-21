@@ -10,7 +10,7 @@ def convertToNumbers(words):
 	for word in words:
 		number = ""
 		for char in word:
-			num = [val for key, val in associations.items() if char in key]
+			num = [val for key, val in associations.items() if char.lower() in key]
 			number += str(num[0])
 
 		# now we have a complete number

@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 
-def graphResults(results):
+def graphResults(results, fileName, characterCount):
 	keys = results.keys()
 	values = results.values()
 	plt.bar(keys, values)
-	plt.savefig("out.png")
-
+	fileName = fileName.replace(".txt", "")
+	plt.savefig(fileName + "-" + characterCount + "-letters" + ".png")
