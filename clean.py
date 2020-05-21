@@ -1,12 +1,13 @@
 from unidecode import unidecode
 
-def cleanWordlist(fileName, characterCount):
+def cleanWordlist(fileName, length):
 	cleanedList = []
-	f = open(fileName, "r")
+	wordlist = open(fileName, "r")
 
-	for line in f:
-		line = unidecode(line.rstrip().lower())
-		if len(line) == characterCount and line.isalpha():
-			cleanedList.append(line)
+	for word in wordlist:
+		# Transforms non-Unicode characters and strips newline characters
+		word = unidecode(word.rstrip()).lower()
+		if len(word) == length and word.isalpha(): # Checks length and must be 100% letters
+			cleanedList.append(word)
 
 	return cleanedList

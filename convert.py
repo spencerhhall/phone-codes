@@ -1,22 +1,23 @@
-associations = {"abc": 2, "def": 3, "ghi": 4, "jkl": 5,"mno": 6,"pqrs": 7,"tuv": 8, "wxyz": 9}
+# Dictionary containing the number associated with each part of the alphabet
+ASSOCIATIONS = {"abc": 2, "def": 3, "ghi": 4, "jkl": 5,"mno": 6,"pqrs": 7,"tuv": 8, "wxyz": 9}
 
-def convertToNumbers(words):
-	numbers = {}
-	# iterate through the list of words
-	# convert the word into a number
-	# if the key (number) exists, increase frequency (value)
-	# if not, make new key and value (number, 1)
-	# return dictionary
-	for word in words:
-		number = ""
-		for char in word:
-			num = [val for key, val in associations.items() if char.lower() in key]
-			number += str(num[0])
+def convertToNumbers(wordlist):
+	combos = {}
 
-		# now we have a complete number
-		if number in numbers:
-			numbers[number] = numbers[number] + 1
+	for word in wordlist:
+		combo = ""
+		# Iterates through each letter in the word and checks if it is part of any dict keys
+		# (it should be 100% of the time) and then concatenates the value to the combo
+		for letter in word:
+			number = [val for key, val in ASSOCIATIONS.items() if letter in key]
+			combo += str(number[0])
+
+		# Combination is complete, now to add to dict if not already recorded or the frequency
+		# of the combo is increased by 1
+		if combo in combos:
+			# Increases frequency by 1
+			combos[combo] = combos[combo] + 1
 		else:
-			numbers[number] = 1
+			combos[combo] = 1
 
-	return numbers
+	return combos

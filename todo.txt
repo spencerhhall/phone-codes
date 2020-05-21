@@ -1,4 +1,1 @@
-- Clean up and comment code
-- Only plot x% of values
 - Create some sort of summary output
-- Toss

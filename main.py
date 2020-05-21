@@ -10,15 +10,14 @@ def main():
 	 		break
 
 	while True:
-		characterCount = input("Enter an amount of characters\n")
-		if characterCount.isdigit() and characterCount != "0":
+		lengthSetting = input("Enter the desired word length\n")
+		# Ensures that the length is a positive integer
+		if lengthSetting.isdigit() and lengthSetting != "0":
 			break
 
-	cleanedWordlist = clean.cleanWordlist("wiki-100k.txt", int(characterCount))
-	print(cleanedWordlist)
-	numbers = convert.convertToNumbers(cleanedWordlist)
-	print(numbers)
-	viz.graphResults(numbers, "wiki-100k.txt", characterCount)
+	cleanedList = clean.cleanWordlist("wiki-100k.txt", int(lengthSetting))
+	numberCombos = convert.convertToNumbers(cleanedList)
+	viz.graphResults(numberCombos, "wiki-100k.txt", lengthSetting)
 
 if __name__ == "__main__":
    main()
