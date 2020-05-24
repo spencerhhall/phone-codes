@@ -1,2 +1,2 @@
 - Create some sort of summary output
-- Make the input section one function
+- Rethink passing the maxBars argument before knowing the length of numberCombos

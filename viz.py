@@ -1,6 +1,9 @@
-import numpy as np, matplotlib.pyplot as plt
+import numpy as np, matplotlib.pyplot as plt, summarize
 
 def graphResults(numberCombos, fileName, length, maxBars):
+	
+	summarize.summarize(numberCombos)
+
 	values = numberCombos.values()
 	dictCopy = dict(numberCombos)
 
@@ -33,7 +36,7 @@ def graphResults(numberCombos, fileName, length, maxBars):
 	plt.title("Top " + str(len(keys)) + " " + length + "-Letter Combinations from " + fileName)
 	plt.xticks(rotation = 70)
 	plt.yticks(np.arange(0, valMax + 1, step = 1))
-	plt.grid(True, alpha = .2)
+	plt.grid(True, alpha = .25)
 	plt.show()
 
 	# plt.savefig(fileName[:-4] + "-" + length + "-letters" + ".png")
