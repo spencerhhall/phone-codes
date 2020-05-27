@@ -1,2 +1,2 @@
-- Create some sort of summary output
+- Make a distribution of the frequency of frequencies
 - Rethink passing the maxBars argument before knowing the length of numberCombos

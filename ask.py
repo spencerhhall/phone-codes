@@ -15,5 +15,3 @@ def getInput(prompt, isFilename):
 				break
 
 	return response
-
-

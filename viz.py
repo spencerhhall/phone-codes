@@ -2,7 +2,7 @@ import numpy as np, matplotlib.pyplot as plt, summarize
 
 def graphResults(numberCombos, fileName, length, maxBars):
 	
-	summarize.summarize(numberCombos)
+	summarize.summarize(numberCombos, fileName, length)
 
 	values = numberCombos.values()
 	dictCopy = dict(numberCombos)
