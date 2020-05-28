@@ -34,9 +34,33 @@ def graphResults(numberCombos, fileName, length, maxBars):
 	plt.xlabel("Combination")
 	plt.ylabel("Frequency")
 	plt.title("Top " + str(len(keys)) + " " + length + "-Letter Combinations from " + fileName)
-	plt.xticks(rotation = 70)
+	plt.xticks(rotation = 75)
 	plt.yticks(np.arange(0, valMax + 1, step = 1))
 	plt.grid(True, alpha = .25)
 	plt.show()
 
-	# plt.savefig(fileName[:-4] + "-" + length + "-letters" + ".png")
+	
+	# plotting the frequencies (values)
+	# frequencies
+	frequencies = numberCombos.values()
+
+	# setting the ranges and no. of intervals 
+
+	# plotting a histogram 
+	plt.hist(frequencies, bins = max(frequencies), align = "mid", histtype = 'bar', rwidth = .9)
+
+	plt.yscale("log")
+
+	# x-axis label 
+	plt.xlabel('Frequency of a Combination') 
+	# frequency label 
+	plt.ylabel('Combinations') 
+  
+	# function to show the plot 
+	plt.show() 
+
+
+
+
+
+
