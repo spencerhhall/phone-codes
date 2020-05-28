@@ -1,2 +1,3 @@
-- Make a distribution of the frequency of frequencies
+- Finish second histogram
 - Rethink passing the maxBars argument before knowing the length of numberCombos
+- Check the accuracy of plots

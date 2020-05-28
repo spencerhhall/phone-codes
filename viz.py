@@ -55,12 +55,5 @@ def graphResults(numberCombos, fileName, length, maxBars):
 	plt.xlabel('Frequency of a Combination') 
 	# frequency label 
 	plt.ylabel('Combinations') 
-  
 	# function to show the plot 
 	plt.show() 
-
-
-
-
-
-
