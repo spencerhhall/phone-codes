@@ -4,6 +4,7 @@ from ask import getInput
 PROMPT = "Enter the desired number of results"
 
 def main():
+	# The second argument is only True if we're looking to find a file
 	fileName = getInput("Enter the name of the wordlist file (must be a txt)", True)
 	lengthSetting = getInput("Enter the desired word length", False)
 

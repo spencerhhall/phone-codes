@@ -8,6 +8,7 @@ def convertToNumbers(wordlist):
 		combo = ""
 		# Iterates through each letter in the word and checks if it is part of any dict keys
 		# (it should be 100% of the time) and then concatenates the value to the combo
+		# Should probably add some error catching, because, you know, computers
 		for letter in word:
 			# Shoutout StackOverflow for this tasty line
 			number = [val for key, val in ASSOCIATIONS.items() if letter in key]

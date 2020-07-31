@@ -10,6 +10,7 @@ def getInput(prompt, isFilename):
 				response += ".txt"
 			if path.exists(response):
 	 			break
+	 	# Not looking for files, just need a non-zero number
 		else:
 			if response.isdigit() and response != "0":
 				break
