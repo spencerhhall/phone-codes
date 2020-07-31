@@ -39,7 +39,6 @@ def graphResults(numberCombos, fileName, length, maxBars):
 	plt.grid(True, alpha = .25)
 	plt.show()
 
-	
 	# plotting the frequencies (values)
 	# frequencies
 	frequencies = numberCombos.values()
