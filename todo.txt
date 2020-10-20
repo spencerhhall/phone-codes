@@ -1,3 +1,8 @@
 - Finish second histogram
 - Rethink passing the maxBars argument before knowing the length of numberCombos
 - Check the accuracy of plots
+- Holy shit what did I even write
+- Add GUI interface
+- Consider ordering the combinations by frequency
+- Make the verbage a little more clear
+- Figure out how to use .gitignore
