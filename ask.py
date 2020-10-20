@@ -1,10 +1,13 @@
 import os.path
 from os import path
 
+# prompt: string that contains the input prompt
+# isFilename: boolean that indicates if the desired input is a file name
 def getInput(prompt, isFilename):
 	while True:
 		response = input(prompt + "\n")
 
+		# Checks for an existing file
 		if isFilename:
 			if ".txt" not in response:
 				response += ".txt"

@@ -9,10 +9,10 @@ def graphResults(numberCombos, fileName, length, maxBars):
 
 	# With large wordlists, there will be far too many number combinations to display
 	# It is easier to have the user suggest a number of combinations to display
-	# Becuase I'm lazy and there will usually be combos with the same frequency, the suggested
+	# Because I'm lazy and there will usually be combos with the same frequency, the suggested
 	# number is not usually the actual display number
 	if len(numberCombos) > maxBars:
-		valCopies = []
+		valCopies = [] # why make a copy?
 
 		# Sorts the frequencies so we can take the desired amount
 		for v in values:
@@ -26,6 +26,9 @@ def graphResults(numberCombos, fileName, length, maxBars):
 		for x, y in numberCombos.items():
 			if numberCombos[x] < valMin:
 				dictCopy.pop(x)
+
+	# shoutout stack
+	dictCopy = {k: v for k, v in sorted(dictCopy.items(), key=lambda item: item[1])}
 
 	keys = dictCopy.keys()
 	values = dictCopy.values()
